@@ -1,0 +1,36 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+    Create Post - Utopia Lagos
+{% endblock title %}
+
+{% block pre %}
+    active
+{% endblock pre %}
+{% load static %}
+{% load humanize %}
+{% block hero %}
+    Create A New Post
+{% endblock hero %}
+
+{% block create %}
+{% load crispy_forms_tags %}
+
+<section class="blog_area single-post-area section-padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-8 posts-list">
+             
+             <div class="comment-form">
+                <h4>New Post</h4>
+                <form class="form-contact comment_form" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                      {{form | crispy}}
+                      <br>
+                      <hr>
+                   <div class="form-group">
+                      <button type="submit" class="button button-contactForm btn_1 boxed-btn">Create</button>
+                   </div>
+                </form>
+             </div>
+          </div>
+          {% endblock %}

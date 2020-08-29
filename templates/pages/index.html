@@ -1,0 +1,354 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Utopia - Lagos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="manifest" href="site.webmanifest"> -->
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nanum+Gothic:wght@700&family=Poppins:ital,wght@0,300;0,400;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+		<!-- CSS here -->
+            <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+   </head>
+
+   <body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'img/logo.png' %}" alt="Utopia">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+                <div class="main-header  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2 col-md-1">
+                                <div class="logo">
+                                    <a href="{% url 'home' %}">
+                                        <img src="{% static 'img/logo.png' %}" alt="Utopia" width="115px" height="47px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav> 
+                                        <ul id="navigation">  
+                                            <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                                            <li><a href="{% url 'about' %}">About Us</a>
+                                            <ul class="submenu">
+                                                <li><a href="{% url 'about' %}#team">Team</a></li>
+                                                <li><a href="{% url 'about' %}#advisory">Advisory Board</a></li>
+                                                <li><a href="{% url 'about' %}#partners">Partners</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                                        <li><a href="{% url 'citylab' %}"><strong>CITYLABS</strong> </a></li>
+                                        <li><a>Projects</a>
+                                            <ul class="submenu">
+                                                <li><a href="https://urbanchallenge.co/" target="_blank">Lagos Urban Innovation Challenge</a></li>
+                                                <li><a href="https://megacityfund.com/" target="_blank">Megacity Fund</a></li>
+                                            </ul>
+                                        </li>
+                                            <li><a>Press</a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'news' %}">News</a></li>
+                                                    <li><a href="">Press Kit</a></li>
+                                                    <li><a href="{% url 'post_list' %}">Blog</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- <div class="header-right-btn f-right d-none d-lg-block">
+                                    <a href="#" class="btn header-btn">+2349031144654 </a>
+                                </div> -->
+                            </div>
+                            </div>   
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+
+        <!-- slider Area Start-->
+        <div class="slider-area slider-height" data-background="{% static 'assets/img/hero/h1_hero.jpg' %}">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider">
+                    <div class="slider-cap-wrapper">
+                        <div class="hero__caption">
+                            <p data-animation="fadeInLeft" data-delay=".2s">Look to the future.</p>
+                            <h1 data-animation="fadeInLeft" data-delay=".5s">We’re an urban innovation group for emerging cities</h1>
+                            <p data-animation="fadeInLeft" data-delay=".2s" style="color: black;">
+                                Utopia is establishing a CITYLAB urban venture studio in Lagos. Lagos is projected to become the largest megacity in 
+                                the world by the end of the century and needs a home for urban innovation to help shape the future of the city.
+                            </p>
+                            <!-- Hero Btn -->
+                            <a href="mailto://lagos@utopia.do" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Say Hi</a> <br>
+                        </div>
+                        <br>
+                        <div class="hero__img">
+                            <img src="{% static 'img/slider03.png' %}" alt="" width="529px" height="424px">
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Slider -->
+                <div class="single-slider">
+                    <div class="slider-cap-wrapper">
+                        <div class="hero__caption">
+                            <p data-animation="fadeInLeft" data-delay=".2s">Bigger is better.</p>
+                            <h1 data-animation="fadeInLeft" data-delay=".5s">Our cities are growing to a massive size. Our ambition has to reflect this. </h1>
+                            <!-- Hero Btn -->
+                            <a href="mailto://lagos@utopia.do" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Say Hi</a>
+                        </div>
+                        <div class="hero__img">
+                            <img src="{% static 'img/slider01.png' %}" alt="" width="529px" height="424px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- slider Area End-->
+        <!-- About Law Start-->
+        <div class="about-low-area section-padding2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-caption mb-50">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle mb-35">
+                                <!-- <span>What If</span> -->
+                                <h1 style="font-size: 56px;">What If</h1>
+                            </div>
+                            <p>What if there were a new type of city that is a better fit for this century? One that is more lightweight, light touch, and adaptive than we've seen before. 
+                                What if the future of our cities could come from the rethinking of emerging cities and their slums?</p>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, oeiusmod tempor incididunt ut labore et dolore magna aliq.</p> -->
+                            <a href="https://utopia.do/manifesto" target="_blank" class="btn">Manifesto</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <!-- about-img -->
+                        <div class="about-img ">
+                            <div class="about-font-img d-none d-lg-block">
+                                <!-- 294*341 -->
+                                <img src="{% static 'img/whatif1.jpg' %}" alt="" width="294px" height="341px">
+                            </div>
+                            <div class="about-back-img ">
+                                <!-- 441*564 -->
+                                <img src="{% static 'img/whatif1.jpg' %}" alt="" width="441px" height="564px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About Law End-->
+        
+        <!-- About Law Start-->
+        <div class="about-low-area section-padding2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <!-- about-img -->
+                        <div class="about-img ">
+                            <div class="about-font-img d-none d-lg-block">
+                                <!-- 294*341 -->
+                                <img src="{% static 'img/whatif2.jpg' %}" alt="" width="294px" height="341px">
+                            </div>
+                            <div class="about-back-img ">
+                                <!-- 441*564 -->
+                                <img src="{% static 'img/whatif2.jpg' %}" alt="" width="441px" height="564px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-caption mb-50">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle mb-35">
+                                <!-- <span>What If</span> -->
+                                <h1 style="font-size: 56px;">A Network of CITYLABS</h1>
+                            </div>
+                            <p>Utopia is creating a network of CITYLABS across Africa, Asia, and 
+                                Latin America to build an urban ecosystem for emerging cities.</p>
+                            
+                            <a href="{% url 'citylab' %}" target="_blank" class="btn">CITYLABS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About Law End-->
+        <!-- Blog Ara Start -->
+        <!-- <div class="home-blog-area section-padding30">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-10">
+                        
+                        <div class="section-tittle text-center mb-70">
+                            <span></span>
+                            <h2>News from our latest blog</h2>
+                        </div> 
+                    </div>
+                </div>
+                <div class="row">
+                    {% if posts %}
+                    {% for post in posts %}
+                        <div class="col-xl-6 col-lg-6 col-md-6">
+                            
+                            <div class="single-blogs mb-30">
+                                <div class="blog-images">
+                                    {% if post.image %}
+                                    <img src="{{post.image.url}}" alt="post-image" width="495px" height="384.4">
+                                    {% endif %}
+                                </div>
+                                <div class="blog-captions">
+                                    <span>{{post.published|date}}</span>
+                                    <h2><a href="{{post.get_absolute_url}}">{{post.title}}</a></h2>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="single-blogs mb-30">
+                            <div class="blog-captions">
+                                <h2><a>There are no posts yet!</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div> -->
+        <!-- Blog Ara End -->
+
+    </main>
+    <footer>
+        <!-- Footer Start-->
+        <div class="footer-area">
+            <div class="container">
+               <div class="footer-top footer-padding">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <!-- logo -->
+                                    <div class="footer-logo">
+                                        <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="Utopia" width="115px" height="47px"></a>
+                                    </div>
+                                    <div class="footer-pera">
+                                        <p>Do the right thing. In every scenario, in every way, we seek to do the right thing, the just thing.</p>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Quick Link</h4>
+                                    <ul>
+                                        <li><a href="{% url 'about' %}">About</a></li>
+                                        <li><a href="{% url 'citylab' %}"><strong>CITYLABS</strong></a></li>
+                                        <li><a href="https://utopia.do/manifesto" target="_blank">Manifesto</a></li>
+                                        <li><a href="{% url 'contact' %}"> Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="https://twitter.com/utopiacities" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/utopiaglobal" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="mailto:hello@utopia.do"><i class="fas fa-envelope"></i></a>
+                                <a href="https://www.instagram.com/utopia.do/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+
+    <!-- JS here -->
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'assets/js/popper.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/js/slick.min.js' %}"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static 'assets/js/wow.min.js' %}"></script>
+		<script src="{% static 'assets/js/animated.headline.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+
+		<!-- Nice-select, sticky -->
+        <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
+        
+        <!-- contact js -->
+        <script src="{% static 'assets/js/contact.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.form.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'assets/js/mail-script.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="{% static 'assets/js/plugins.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,71 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    Search Results - Utopia Lagos
+{% endblock title %}
+
+{% block pre %}
+    active
+{% endblock pre %}
+{% load static %}
+{% load humanize %}
+{% block hero %}
+    Search Results For "{{query}}"
+{% endblock hero %}
+
+{% block content %}
+    
+
+    
+        
+    
+        <!--================Blog Area =================-->
+        <section class="blog_area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="blog_left_sidebar">
+                            {% if posts %}
+                            {% for post in posts %}
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    {% if post.image %}
+                                    <img class="card-img rounded-0" src="{{post.image.url}}" alt="">
+                                    {% endif %}
+                                    <a class="blog_item_date">
+                                        <h3>{{post.published | naturalday}}</h3>
+                                        <!-- <p>Jan</p> -->
+                                    </a>
+                                </div>
+
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="{{ post.get_absolute_url }}">
+                                        <h2>{{post.title}}</h2>
+                                    </a>
+                                    <p>{{ post.body | safe | truncatewords:25 }}</p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="{% url 'post_tag' post.tag.name %}"><i class="fa fa-user"></i> {{post.tag.name}}</a></li>
+                                        <li><a><i class="fa fa-comments"></i>
+                                            {% if post.comments.all %}
+                                            {{ post.comments.all.count }} comment(s)
+                                            {% else %}
+                                                No comments yet.
+                                            {% endif %}</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            {% endfor %}
+                            {% else %}
+                            <article class="blog_item">
+                                <div class="blog_details">
+                                    <a class="d-inline-block">
+                                        <h2>Your search for {{ query }} did not match any results. Try some other keywords!</h2>
+                                    </a>
+                                </div>
+                            </article>
+                            {% endif %}
+
+                            {% include 'blog/pagination.html' %}
+                        </div>
+                    </div>
+                  {% endblock %}

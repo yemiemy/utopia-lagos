@@ -1,0 +1,109 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    News - Utopia Lagos
+{% endblock title %}
+
+{% block pre %}
+    active
+{% endblock pre %}
+{% load static %}
+{% load humanize %}
+{% block hero %}
+    News
+{% endblock hero %}
+
+{% block create %}
+    
+
+    
+        
+    
+        <!--================Blog Area =================-->
+        <section class="blog_area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="blog_left_sidebar">
+                            {% if news %}
+                            {% for object in news %}
+                            {% if object.news_about_utopia %}
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a class="blog_item_date" style="padding: 5px 15px;">
+                                            <h6 style="color: white;">About Utopia</h6>
+                                        </a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="{{ object.link }}" target="_blank">
+                                            <h2>{{object.title}}</h2>
+                                        </a>
+                                        <ul class="blog-info-link">
+                                            <li><a href=""><i class="fa fa-user"></i></a></li>
+                                            <li><a><i class="fa fa-comments"></i>{{object.news_from}}</a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            {% endif %}
+                            {% endfor %}
+                            {% else %}
+                            <article class="blog_item">
+                                <div class="blog_details">
+                                    <a class="d-inline-block">
+                                        <h2>There are no News yet!</h2>
+                                    </a>
+                                </div>
+                            </article>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog_right_sidebar">
+                            {% if news %}
+                            {% for object in news %}
+                            {% if object.news_by_utopia %}
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a class="blog_item_date" style="padding: 5px 15px;">
+                                            <h6 style="color: white;" >By Utopia</h6>
+                                        </a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="{{ object.link }}" target="_blank">
+                                            <h2>{{object.title}}</h2>
+                                        </a>
+                                        <ul class="blog-info-link">
+                                            <li><a href=""><i class="fa fa-user"></i></a></li>
+                                            <li><a><i class="fa fa-comments"></i>{{object.news_from}}</a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            {% endif %}
+                            {% endfor %}
+                            {% else %}
+                            <article class="blog_item">
+                                <div class="blog_details">
+                                    <a class="d-inline-block">
+                                        <h2>There are no News yet!</h2>
+                                    </a>
+                                </div>
+                            </article>
+                            {% endif %}
+            
+                            <aside class="single_sidebar_widget newsletter_widget">
+                                <h4 class="widget_title">Newsletter</h4>
+            
+                                <form action="">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
+                                    </div>
+                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                        type="submit">Subscribe</button>
+                                </form>
+                            </aside>
+                        </div>
+                    </div>
+                  {% endblock %}
